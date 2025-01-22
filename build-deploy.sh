@@ -6,7 +6,7 @@ cd hello-world-war
 mvn clean package
 
 
-sudo cp /target/*.war /opt/tomcat/apache-tomcat-10.1.34/webapps/
+sudo cp /target/hello-world-war-1.0.0.war /opt/tomcat/apache-tomcat-10.1.34/webapps/
 
 
 sudo bash   /opt/tomcat/apache-tomcat-10.1.34/bin/shutdown.sh
