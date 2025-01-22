@@ -7,7 +7,7 @@
 	<p>
 		It is now all about the devops.
 	<p>
-		have a good day
+		have a good day. it is wednesday.
 	<p>
 		<%= new java.util.Date() %></p>
 	<p>
