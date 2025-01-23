@@ -9,6 +9,7 @@
 	<p>
 		have a good day. it is thursday evening.
 	<p>
+		this is about local jfrog artifactory.
 		<%= new java.util.Date() %></p>
 	<p>
 		You are coming from 
