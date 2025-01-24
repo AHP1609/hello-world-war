@@ -7,14 +7,14 @@
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
-	<distributionManagement>
-    		<repository>
-        		<id>hello-world-war</id>
-        		<name>hello-world-war-libs-release</name>
-        		<url>http://43.205.191.222:8082//artifactory/hello-world-war-libs-release/</url>
-    		</repository>
-	</distributionManagement>
 
+<distributionManagement>
+    <repository>
+        <id>hello-world-war-new</id>
+        <name>hello-world-war-new-libs-release</name>
+        <url>http://18.208.223.75:8081/artifactory/hello-world-war-new-libs-release</url>
+    </repository>
+</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -28,15 +28,34 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.4.0</version>
 			</plugin>
-  
+		    	<plugin>
+		      		<groupId>org.sonarsource.scanner.maven</groupId>
+		      		<artifactId>sonar-maven-plugin</artifactId>
+		      		<version>3.9.0.1503</version>
+		    	</plugin>
 			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-			        <artifactId>sonar-maven-plugin</artifactId>
-			        <version>3.9.0.1503</version>
-			 </plugin>
-
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				<executions>
+					<execution>
+					  <id>default-prepare-agent</id>  <!-- Unique execution ID -->
+					  <phase>prepare-package</phase>
+					  <goals>
+					    <goal>prepare-agent</goal>
+					  </goals>
+					</execution>
+					<execution>
+					  <id>default-report</id>  <!-- Unique execution ID -->
+					  <phase>verify</phase>
+					  <goals>
+					    <goal>report</goal>
+					  </goals>
+					</execution>
+			      </executions>
+		    	</plugin>
 		</plugins>
 	</build>
 
