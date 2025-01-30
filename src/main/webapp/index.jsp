@@ -5,7 +5,7 @@
 <body>
 	<h1>Hello, welcome to ANU World!</h1>
 	<p>
-		It is now all about the devops.
+		It is now all about the Devops.
 	<p>
 		Have a good night. it is thursday.
 	<p>
