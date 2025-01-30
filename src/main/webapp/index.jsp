@@ -7,7 +7,7 @@
 	<p>
 		It is now all about the devops.
 	<p>
-		Have a good day. it is thursday.
+		Have a good night. it is thursday.
 	<p>
 		this is about local jfrog artifactory.
 		<%= new java.util.Date() %></p>
