@@ -15,6 +15,13 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('publish')
+    {
+      steps{
+        sh 'mvn clean deploy'
+        sh 'ls'
+      }
+    }
   }
 }
         
