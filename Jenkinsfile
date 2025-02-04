@@ -21,8 +21,7 @@ pipeline {
     stage('publish')
     {
       steps{
-         |
-          sh 'mkdir -p ~/.m2'
+        sh 'mkdir -p ~/.m2'
           sh '''echo "<settings>
                   <servers>
                     <server>
