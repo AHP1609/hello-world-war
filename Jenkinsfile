@@ -31,6 +31,7 @@ pipeline {
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml'''
+        sh 'cat ~/.m2/settings.xml'
         sh 'mvn clean deploy'
         sh 'ls'
       }
