@@ -39,6 +39,14 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('deploy')
+    {
+      agent { label 'deployer'}
+      steps{
+        sh 'curl -L -u "${ARTIFACTORY_CREDENTIALS_USR}:${ARTIFACTORY_CREDENTIALS_PSW}" -O "http://3.110.218.254:8082/artifactory/helloworldwar-cicd-libs-release/com/efsavage/hello-world-war/$BUILD_NUMBER/hello-world-war-$BUILD_NUMBER.war"'
+        sh 'ls'
   }
+}
+}
 }
         
