@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'builder'}
+  agent none
   environment {
     ARTIFACTORY_CREDENTIALS = credentials('jfrog_artifactory_cred')
   }
@@ -7,12 +7,14 @@ pipeline {
   {
     stage('checkout')
     {
+      agent { label 'builder'}
       steps{
         sh 'echo "Hello Good evening."'
       }
     }
     stage('build')
     {
+      agent { label 'builder'}
       steps{
         sh 'mvn clean package'
         sh 'ls'
@@ -20,6 +22,7 @@ pipeline {
     }
     stage('publish')
     {
+      agent { label 'builder'}
       steps{
         sh 'mkdir -p ~/.m2'
           sh '''echo "<settings>
