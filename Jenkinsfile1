@@ -24,7 +24,7 @@ pipeline {
     {
       agent { label 'builder'}
       steps{
-        publish_stage.()
+        publish_stage()
       }
     }
     stage('deploy')
