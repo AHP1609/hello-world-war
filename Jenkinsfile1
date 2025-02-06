@@ -29,7 +29,9 @@ pipeline {
     }
     stage('deploy')
     {
-      deploy_stage()
+      agent { label 'deployer'}
+      steps{
+        deploy_stage()
         
   }
 }
