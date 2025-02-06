@@ -31,7 +31,7 @@ pipeline {
     {
       agent { label 'deployer'}
       steps{
-        deploy_stage(${BUILD_NUMBER})
+        deploy_stage('${BUILD_NUMBER}', '13.201.19.97:8082')
         
   }
 }
